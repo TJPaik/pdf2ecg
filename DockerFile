@@ -1,0 +1,17 @@
+FROM ubuntu:18.04
+
+RUN apt-get update &&\
+    apt-get upgrade -y
+
+RUN apt-get install software-properties-common -y
+RUN add-apt-repository ppa:inkscape.dev/stable -y
+RUN apt-get install inkscape=1.0.2+r75+1~ubuntu18.04.1 -y
+RUN apt-get install python3.8 -y
+
+RUN mkdir /root/workspace
+
+COPY main.py /root/main.py
+
+WORKDIR /root
+
+CMD python3 /root/main.py
