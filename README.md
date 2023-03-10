@@ -1,9 +1,13 @@
-# ecg_parsing_from_pdf_docker
+# ECG Extraction from PDF files
 
-```shell
-docker save -o converter.tar converter:220216
-docker load -i tar converter.tar
+Example code to extract an ECG from a PDF.
+Source code may need to be modified for different hospitals.
 
-# "A" folder contains pdf files
-docker run -it --rm -v A:/root/workspace converter:220216
-```
+The file `pdf2ecg.py` contains an example.
+
+
+## License
+This project is licensed under the BSD (3-Clause) license.
+
+## Credits
+This project is based on the work of [nvictus/svgpath2mpl](https://github.com/nvictus/svgpath2mpl).
